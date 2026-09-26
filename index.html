@@ -55,7 +55,8 @@
   "numberOfItems": 3,
   "hasPart": [
     { "@type": "Book", "name": "What the House Kept", "position": 1, "bookFormat": "https://schema.org/EBook", "datePublished": "2026-05-30", "url": "https://www.amazon.com/dp/B0H3D35JLF" },
-    { "@type": "Book", "name": "The Name They Whispered", "position": 2, "bookFormat": "https://schema.org/EBook", "datePublished": "2026-06-22", "url": "https://www.amazon.com/dp/B0H6CBSPYK" }
+    { "@type": "Book", "name": "The Name They Whispered", "position": 2, "bookFormat": "https://schema.org/EBook", "datePublished": "2026-06-22", "url": "https://www.amazon.com/dp/B0H6CBSPYK" },
+    { "@type": "Book", "name": "The Listener Upstairs", "position": 3, "bookFormat": "https://schema.org/EBook" }
   ]
 }
 </script>
@@ -108,6 +109,7 @@
   .announce .wrap{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;padding-block:9px;text-align:center}
   .announce .tag{font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#17120a;background:var(--amber);padding:3px 9px;border-radius:2px}
   .announce p{font-size:.86rem}
+  .announce p em{font-style:italic}
   .announce a{font-size:.7rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);border-bottom:1px solid var(--line-amber);padding-bottom:2px;white-space:nowrap}
   .announce a:hover{color:#fff}
 
@@ -262,7 +264,7 @@
 <div class="announce">
   <div class="wrap">
     <span class="tag">Coming</span>
-    <p>Book three of the Maple Lane trilogy arrives soon</p>
+    <p><em>The Listener Upstairs</em> — the final Maple Lane book — arrives soon</p>
     <a href="#signup">Get the release date →</a>
   </div>
 </div>
@@ -355,9 +357,9 @@
 
       <article class="bk">
         <div class="no">Book Three</div>
-        <div class="soon-cover">Coming soon</div>
-        <h3>The finale</h3>
-        <p>Who used the room, and what it was really protecting. Join the mailing list and you'll hear the release date first.</p>
+        <div class="soon-cover">Cover<br>coming soon</div>
+        <h3>The Listener Upstairs</h3>
+        <p>The finale: who used the room, and what it was really protecting. Join the mailing list and you'll hear the release date first.</p>
         <a class="go" href="#signup">Get notified <span aria-hidden="true">→</span></a>
       </article>
     </div>
@@ -469,11 +471,10 @@
       <h2 class="display">Be first through the door</h2>
       <p>Book three's release date, early chapters, and the occasional note from behind the books. Sent now and then, never spam.</p>
 
-      <!-- MAILING LIST: replace the action below with the MailerLite form URL for the
-           Tessa Graves list, e.g.
-           https://assets.mailerlite.com/jsonp/ACCOUNT/forms/FORM_ID/subscribe
-           Until that is filled in, the form does not post anywhere and shows a short note instead. -->
-      <form class="ml-form" id="mlForm" action="REPLACE_WITH_MAILERLITE_FORM_ACTION" method="post" target="ml_iframe">
+      <!-- MailerLite: the "Tessa Graves Mail List" form, which adds subscribers to the
+           "Tessa Graves - Maple Lane" group. Double opt-in is on, so people get a
+           confirmation email before they join. -->
+      <form class="ml-form" id="mlForm" action="https://assets.mailerlite.com/jsonp/2476050/forms/199692525343081491/subscribe" method="post" target="ml_iframe">
         <input type="email" name="fields[email]" placeholder="your@email.com" autocomplete="email" aria-label="Email address" required>
         <input type="hidden" name="ml-submit" value="1">
         <input type="hidden" name="anticsrf" value="true">
@@ -553,7 +554,7 @@
       if(typeof gtag==='function'){ gtag('event','sign_up',{method:'mailerlite'}); }
       setTimeout(function(){
         f.style.display='none';
-        msg.textContent="You're in. Watch your inbox.";
+        msg.textContent="Almost there — check your inbox and confirm your email.";
         msg.style.display='block';
       },600);
     });
