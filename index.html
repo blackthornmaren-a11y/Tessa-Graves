@@ -194,6 +194,9 @@
   .bk .go{margin-top:auto;font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);border-top:1px solid var(--line);padding-top:14px;display:flex;justify-content:space-between;gap:8px}
   .bk .go:hover{color:#fff}
   .bk .go.soon{color:var(--faint);pointer-events:none}
+  .bk .cov.nolink{cursor:default}
+  .bk .cov.nolink:hover img{transform:none}
+  .start-here.soon{background:transparent;border:1px solid var(--line-amber);color:var(--amber)}
   .start-here{position:absolute;top:-11px;left:18px;font-size:.58rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#17120a;background:var(--amber);padding:3px 9px;border-radius:2px}
   .soon-cover{display:flex;align-items:center;justify-content:center;aspect-ratio:2/3;background:
      repeating-linear-gradient(135deg,#10161f 0 12px,#131a24 12px 24px);border:1px dashed rgba(233,237,242,.18);color:var(--faint);text-align:center;padding:24px;
@@ -364,8 +367,9 @@
       </article>
 
       <article class="bk">
+        <div class="start-here soon">Coming soon</div>
         <div class="no">Book Three</div>
-        <div class="soon-cover">Cover<br>coming soon</div>
+        <div class="cov nolink"><img src="covers/the-listener-upstairs.jpg" alt="The Listener Upstairs cover" loading="lazy" decoding="async" width="600" height="900"></div>
         <h3>The Listener Upstairs</h3>
         <p>The finale: who used the room, and what it was really protecting. Join the mailing list and you'll hear the release date first.</p>
         <a class="go" href="#signup">Get notified <span aria-hidden="true">→</span></a>
